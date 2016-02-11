@@ -1,0 +1,11 @@
+﻿  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23506 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /IC:\Projects\Dev\Tools\boost_1_60_0 /ZI /W4 /WX /sdl /MP /Od /Oi /Ot /Oy /D CODE_ANALYSIS /D UNICODE /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Zc:rvalueCast /Fo"Win32\Debug\\" /Fd"Win32\Debug\CRAN - Model.pdb" /Gd /TP /analyze /analyze:plugin"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\\bin\localespc.dll" /errorReport:prompt   /analyze:quiet "CranModel-Main.cpp"
+  
+  CranModel-Main.cpp
+  Microsoft (R) Library Manager Version 14.00.23506.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  "/OUT:C:\Projects\Dev\Rimmodding\CRAN\Win32\Debug\CRAN - Model.lib" /WX /MACHINE:X86 /SUBSYSTEM:WINDOWS "Win32\Debug\CranModel-Main.obj" 
+  CRAN - Model.vcxproj -> C:\Projects\Dev\Rimmodding\CRAN\Win32\Debug\CRAN - Model.lib
