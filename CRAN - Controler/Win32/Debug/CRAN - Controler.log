@@ -1,4 +1,14 @@
-﻿  CRAN - Controler.vcxproj -> C:\Projects\Dev\Rimmodding\CRAN\Win32\Debug\CRAN - Controler.exe
+﻿  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23506 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /IC:\Projects\Dev\Tools\boost_1_60_0 /ZI /W4 /WX /sdl /MP /Od /Oi /Ot /Oy /D CODE_ANALYSIS /D UNICODE /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /Zc:inline /Zc:rvalueCast /Fo"Win32\Debug\\" /Fd"Win32\Debug\vc140.pdb" /Gd /TP /analyze /analyze:plugin"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\\bin\localespc.dll" /errorReport:prompt   /analyze:quiet "CranControler-Main.cpp"
+  
+  CranControler-Main.cpp
+  Microsoft (R) Incremental Linker Version 14.00.23506.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  "/OUT:C:\Projects\Dev\Rimmodding\CRAN\Win32\Debug\CRAN - Controler.exe" /INCREMENTAL /LIBPATH:C:\Projects\Dev\Tools\boost_1_60_0\libs /LIBPATH:C:\Projects\Dev\Tools\boost_1_60_0\stage\lib /WX kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST "/MANIFESTUAC:level='asInvoker' uiAccess='false'" /manifest:embed /Debug "/PDB:C:\Projects\Dev\Rimmodding\CRAN\Win32\Debug\CRAN - Controler.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT "/IMPLIB:C:\Projects\Dev\Rimmodding\CRAN\Win32\Debug\CRAN - Controler.lib" /MACHINE:X86 "Win32\Debug\CranControler-Main.obj" 
+  CRAN - Controler.vcxproj -> C:\Projects\Dev\Rimmodding\CRAN\Win32\Debug\CRAN - Controler.exe
   C:\Projects\Dev\Rimmodding\CRAN\Git\PortableGit_WIN32\git-bash.exe
   C:\Projects\Dev\Rimmodding\CRAN\Git\PortableGit_WIN32\git-cmd.exe
   C:\Projects\Dev\Rimmodding\CRAN\Git\PortableGit_WIN32\README.portable

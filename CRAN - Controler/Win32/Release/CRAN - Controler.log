@@ -1,9 +1,1 @@
-﻿  Microsoft (R) Incremental Linker Version 14.00.23506.0
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  "/OUT:C:\Projects\Dev\Rimmodding\CRAN\Win32\Release\CRAN - Controler.exe" /INCREMENTAL:NO /LIBPATH:C:\Projects\Dev\Tools\boost_1_60_0\libs /LIBPATH:C:\Projects\Dev\Tools\boost_1_60_0\stage\lib /WX kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST "/MANIFESTUAC:level='asInvoker' uiAccess='false'" /manifest:embed "/PDB:C:\Projects\Dev\Rimmodding\CRAN\Win32\Release\CRAN - Controler.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT "/IMPLIB:C:\Projects\Dev\Rimmodding\CRAN\Win32\Release\CRAN - Controler.lib" /MACHINE:X86 /SAFESEH "Win32\Release\CranControler-Main.obj" 
-  CRAN - Controler.vcxproj -> C:\Projects\Dev\Rimmodding\CRAN\Win32\Release\CRAN - Controler.exe
-  C:\Projects\Dev\Rimmodding\CRAN\Git\PortableGit_WIN32\git-bash.exe
-  C:\Projects\Dev\Rimmodding\CRAN\Git\PortableGit_WIN32\git-cmd.exe
-  C:\Projects\Dev\Rimmodding\CRAN\Git\PortableGit_WIN32\README.portable
-          3 file(s) copied.
+﻿  CRAN - Controler.vcxproj -> C:\Projects\Dev\Rimmodding\CRAN\Win32\Release\CRAN - Controler.exe
