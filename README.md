@@ -21,3 +21,18 @@ Welcome to Gent's Integrated Rimworld Archive Network. Currently we are implemen
  * a combination of the two words "I" (the prounoun used to refer to yourself) and "RAN" (the past tense of "Run")
  * "Integrated Rimworld Archive Network" - you're in a good mood, and it actually works for you. Angels sing, and a light suddenly fills the room.
  * "I RAN FOR A WHILE BUT THEN DECIDED TO BE AN ASSHOLE" - when it breaks
+ 
+ ---------------------
+ 
+##Required Setup
+
+---------------------
+MainFolder
+ * I-RAN - Controler.exe
+ * I-RAN - Model.dll
+ * I-RAN - View.dll
+ * RW-Install
+   * Mods
+   * RimWorld???Win.exe
+ * GitPortable
+   * Git install from under 'Git\PortableGit_WIN32'
