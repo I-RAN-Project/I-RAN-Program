@@ -72,7 +72,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>C:\Projects\Dev\Tools\boost_1_60_0;$(SolutionDir)\I-RAN - Model</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Dev\Tools\boost_1_60_0;$(SolutionDir)\I-RAN - Model;$(SolutionDir)\I-RAN - View</AdditionalIncludeDirectories>
       <EnablePREfast>true</EnablePREfast>
       <FloatingPointExceptions>false</FloatingPointExceptions>
     </ClCompile>
@@ -84,6 +84,7 @@
       <SuppressStartupBanner>false</SuppressStartupBanner>
       <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -107,7 +108,7 @@
       <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>C:\Projects\Dev\Tools\boost_1_60_0;$(SolutionDir)\I-RAN - Model</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Dev\Tools\boost_1_60_0;$(SolutionDir)\I-RAN - Model;$(SolutionDir)\I-RAN - View</AdditionalIncludeDirectories>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FloatingPointExceptions>true</FloatingPointExceptions>
