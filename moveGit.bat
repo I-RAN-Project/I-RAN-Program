@@ -1,0 +1,44 @@
+@echo off
+title Git Mover
+cls
+
+echo Moving 'Git\PortableGit_WIN32' into 'Win32\Debug\GitPortable"'
+
+if exist "Win32" (
+	rmdir /Q /S "Win32"
+)
+
+mkdir "Win32"
+cd Win32
+
+mkdir "Debug"
+cd Debug
+
+if exist ".\GitPortable" (
+	rmdir /Q /S ".\GitPortable"
+)
+
+mkdir ".\GitPortable"
+cd ".\GitPortable"
+
+xcopy "..\..\..\Git\PortableGit_WIN32"  /e
+
+cd ..\..
+
+echo Moving 'Git\PortableGit_WIN32' into 'Win32\Release\GitPortable"'
+
+mkdir "Release"
+cd Release
+
+if exist ".\GitPortable" (
+	rmdir /Q /S ".\GitPortable"
+)
+
+mkdir ".\GitPortable"
+cd ".\GitPortable"
+
+xcopy "..\..\..\Git\PortableGit_WIN32"  /e
+
+cd ..\..\..\
+
+echo Done!

@@ -1,0 +1,6 @@
+﻿  Microsoft (R) Incremental Linker Version 14.00.23506.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  "/OUT:C:\Projects\Dev\Rimmodding\I-RAN\Win32\Debug\I-RAN - Controler.exe" /INCREMENTAL /LIBPATH:C:\Projects\Dev\Tools\boost_1_60_0\libs /LIBPATH:C:\Projects\Dev\Tools\boost_1_60_0\stage\lib "/LIBPATH:C:\Projects\Dev\Rimmodding\I-RAN\Win32\Debug\\" /WX kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST "/MANIFESTUAC:level='asInvoker' uiAccess='false'" /manifest:embed /Debug "/PDB:C:\Projects\Dev\Rimmodding\I-RAN\Win32\Debug\I-RAN - Controler.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT "/IMPLIB:C:\Projects\Dev\Rimmodding\I-RAN\Win32\Debug\I-RAN - Controler.lib" /MACHINE:X86 "Win32\Debug\I-RANControler-Main.obj" 
+  "C:\Projects\Dev\Rimmodding\I-RAN\Win32\Debug\I-RAN - Model.lib" 
+  I-RAN - Controler.vcxproj -> C:\Projects\Dev\Rimmodding\I-RAN\Win32\Debug\I-RAN - Controler.exe
