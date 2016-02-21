@@ -1,1 +1,0 @@
-echo "git init -q & pause" | git-cmd.exe 
