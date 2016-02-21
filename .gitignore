@@ -1,13 +1,23 @@
+#Used by VS
 I-RAN.VC.opendb
-Win32
-Win32\
+
+#Remove stuff that gets compiled!
 Win32\*
-I-RAN - Controler\Win32
-I-RAN - Controler\Win32\
 I-RAN - Controler\Win32\*
-I-RAN - Model\Win32
-I-RAN - Model\Win32\
 I-RAN - Model\Win32\*
-I-RAN - View\Win32
-I-RAN - View\Win32\
 I-RAN - View\Win32\*
+
+#RW Install Contents
+RW-Install/Version.txt
+RW-Install/Credits_FreeSounds.txt
+RW-Install/README.md
+RW-Install/psi-settings.cfg
+RW-Install/README.txt
+RW-Install/Readme_SaveFiles.txt
+RW-Install/Readme_Modmaking.txt
+RW-Install/Readme_Translations.txt
+RW-Install/RimWorld914Win.exe
+RW-Install/RimWorld TestWorld.lnk
+RW-Install/RimWorld914Win_Data/*
+RW-Install/SaveData/*
+RW-Install/Source/*

@@ -32,7 +32,9 @@ MainFolder
  * I-RAN - Model.dll
  * I-RAN - View.dll
  * RW-Install
-   * Mods
-   * RimWorld???Win.exe
+   * RW install from under 'RW-Install\'
  * GitPortable
    * Git install from under 'Git\PortableGit_WIN32'
+   
+Use 'SetupInstall.bat' to move the RW-Install and Git\PortableGit_WIN32 for you.
+Remember to drag your own copy of RW into 'RW-Install'. Insure the Mods folder exists but is empty!
