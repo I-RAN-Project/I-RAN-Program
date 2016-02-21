@@ -1,7 +1,0 @@
-﻿  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23506 for x86
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  cl /c /IC:\Projects\Dev\Tools\boost_1_60_0 /ZI /W4 /WX /sdl /MP /Od /Oi /Ot /Oy /D CODE_ANALYSIS /D UNICODE /D WIN32 /D _DEBUG /D _CONSOLE /D DLL_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /Zc:inline /Zc:rvalueCast /Fo"Win32\Debug\\" /Fd"Win32\Debug\vc140.pdb" /Gd /TP /analyze /analyze:plugin"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\\bin\localespc.dll" /errorReport:prompt   /analyze:quiet Filesystem\GitWrapper\Sources\GitWrapper.cpp
-  
-  GitWrapper.cpp
-  I-RAN - Model.vcxproj -> C:\Projects\Dev\Rimmodding\I-RAN\Win32\Debug\I-RAN - Model.dll
