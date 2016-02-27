@@ -15,22 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Filesystem\GitWrapper\Headers\GitWrapper.hpp">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Filesystem\Headers\RunExecutables.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="I-RANModelDLL.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Filesystem\GitWrapper\Headers\GitWrapper.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Filesystem\GitWrapper\Sources\GitWrapper.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="Filesystem\Sources\RunExecutables.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Filesystem\GitWrapper\Sources\GitWrapper.cpp">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

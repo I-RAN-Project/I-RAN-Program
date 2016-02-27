@@ -9,8 +9,16 @@
 #include <string>
 
 #include <iostream>
-#include <fstream>
+
+#include <boost/numeric/ublas/vector.hpp>
 #include <boost\filesystem.hpp>
+
+#include <boost\foreach.hpp>
+#define foreach_b_  BOOST_FOREACH
+#define foreach_br_ BOOST_REVERSE_FOREACH
+
+#include <boost/interprocess/smart_ptr/unique_ptr.hpp>
+#include <boost\make_unique.hpp>
 
 #include "..\..\Headers\RunExecutables.hpp"
 
@@ -37,8 +45,21 @@ namespace IRAN
 					~GitWrapper();
 
 					int RunGitCommand(std::wstring, std::wstring, bool);
+					int RunBashScript(boost::numeric::ublas::vector<std::wstring>, std::wstring, bool); //Gawd VS. It goddamn exists. See GitWapper.cpp.
 				private:
-					RunExecutablesImpl *runExecutable;
+
+					// Because something in unique_ptr (not sure what, or how it works exactly) doesn't have a declspec it won't be exported. 
+					// Problem is that the compiler _MIGHT_ try to inline it, and you can't inline something that doesn't exist (to GitWrapper, or the users of GitWrapper? I dunno.), 
+					// So we have to put it in its own class.
+					// 
+					// Or at least I think thats the reason.
+					// Please help me understand Warning C4251
+					// :(
+					//
+					class runExecutableC {
+					public:
+						boost::interprocess::unique_ptr<RunExecutablesImpl> ptr;
+					} runExecutable;
 				};
 			}
 		}

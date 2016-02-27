@@ -49,7 +49,7 @@ int IRAN::Model::Filesystem::RunExecutables::RunExecutable(std::wstring executab
 
 	if (!CreateProcess(executableLocation, executableArguments, nullptr, nullptr, false, CREATE_NEW_CONSOLE, nullptr, executableEnviroment, &startupInfo, &processInfo))
 	{
-		std::cerr << "RunExecutable failed (" << GetLastError() << ").\n";
+		std::wcerr << "RunExecutable failed (" << GetLastError() << ").\n";
 		return 1;
 	}
 

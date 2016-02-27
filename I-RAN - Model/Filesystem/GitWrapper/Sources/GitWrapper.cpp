@@ -1,31 +1,39 @@
 #include "..\Headers\GitWrapper.hpp"
 
-IRAN::Model::Filesystem::GitWrapper::GitWrapper::GitWrapper()
+IRAN::Model::Filesystem::GitWrapper::GitWrapper::GitWrapper() 
 {
-	runExecutable = new RunExecutables;
+	runExecutable.ptr = boost::interprocess::unique_ptr<RunExecutablesImpl>(new RunExecutables);
 }
 
-IRAN::Model::Filesystem::GitWrapper::GitWrapper::~GitWrapper()
-{
-	delete runExecutable;
-}
+IRAN::Model::Filesystem::GitWrapper::GitWrapper::~GitWrapper() {}
 
-//We assume you've already made a 'temp' file, if not screw off
 int IRAN::Model::Filesystem::GitWrapper::GitWrapper::RunGitCommand(std::wstring command, std::wstring enviroment, bool isBlocking)
+{	
+	boost::numeric::ublas::vector<std::wstring> t(1);
+	t[0] = L"\"" + boost::filesystem::current_path().wstring() + L"\\GitPortable\\bin\\git.exe\" " + command + L"\n";
+
+	return RunBashScript(t, enviroment, isBlocking);
+}
+
+int IRAN::Model::Filesystem::GitWrapper::GitWrapper::RunBashScript(boost::numeric::ublas::vector<std::wstring> commands, std::wstring enviroment, bool isBlocking)
 {
-	std::fstream batfile("temp\\thisGitCommand.bat", std::fstream::out);
+	std::wfstream batfile(L"temp\\thisBashScript.bat", std::fstream::out);
 
 	if (!batfile)
 	{
-		std::cerr << L"Could not open file.\n";
+		std::wcerr << L"Could not open file.\n";
 		return -1;
 	}
-				 
-	batfile << "cd " << std::string(enviroment.begin(), enviroment.end()) << "\n";
-	batfile << "\"" << boost::filesystem::current_path().string() << "\\GitPortable\\bin\\git.exe" << "\" " << std::string(command.begin(), command.end()) << "\n";
-	//batfile << "pause" << "\n";
 
-	batfile.close();
+	batfile << L"cd " << enviroment << L"\n";
 
-	return runExecutable->RunExecutable(L"", L"cmd.exe /C " + boost::filesystem::current_path().wstring() + L"\\temp\\thisGitCommand.bat", boost::filesystem::current_path().wstring(), isBlocking);
+	foreach_b_(std::wstring thisCommand, commands)
+	{
+		batfile <<  thisCommand << L"\n";
+	}
+
+	batfile.close(); //... Close is a C++ Standard Library, this only shows that either A: Microsoft failed to implement their standard C++ libraries OR B: Microsoft's Intellisense is crap. 
+
+	return runExecutable.ptr->RunExecutable(L"", L"cmd.exe /C " + boost::filesystem::current_path().wstring() + L"\\temp\\thisBashScript.bat", boost::filesystem::current_path().wstring(), isBlocking);
 }
+

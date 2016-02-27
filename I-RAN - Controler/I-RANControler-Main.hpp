@@ -9,13 +9,10 @@
 #define BOOST_FILESYSTEM_NO_DEPRECATED
 #include "Filesystem\GitWrapper\Headers\GitWrapper.hpp"
 
-using namespace IRAN::Model;
-
 namespace IRAN
 {
 	namespace Controler
 	{
-	
 		class IRANControlerMain
 		{
 		public:
@@ -24,8 +21,8 @@ namespace IRAN
 
 			int IRANEntryPoint();
 		private:
-			Filesystem::RunExecutablesImpl *runExecutable;
-			Filesystem::GitWrapper::GitWrapperImpl *gitWrapper;
+			IRAN::Model::Filesystem::RunExecutablesImpl *runExecutable;
+			IRAN::Model::Filesystem::GitWrapper::GitWrapperImpl *gitWrapper;
 			boost::filesystem::path currPath;
 		};
 	}
