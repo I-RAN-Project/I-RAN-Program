@@ -7,6 +7,6 @@ int main(int argc, char *argv[])
 	IranEntryPoint eP;
 
 	//I need to pass a reference to app... for reasons!
-	int runApp = eP.RunApp(argc, argv, &app);
+	int runApp = eP.RunApp(&app);
 	return runApp;
 }

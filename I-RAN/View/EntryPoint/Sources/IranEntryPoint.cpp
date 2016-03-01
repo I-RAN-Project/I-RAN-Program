@@ -10,8 +10,10 @@ IranEntryPoint::~IranEntryPoint()
 
 }
 
-int IranEntryPoint::RunApp(int argc, char *argv[], QApplication *application)
+int IranEntryPoint::RunApp(QApplication *application)
 {
+	application;
+
 	show();
 	return application->exec();
 }

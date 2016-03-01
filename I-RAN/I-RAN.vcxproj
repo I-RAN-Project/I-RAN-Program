@@ -53,7 +53,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>UNICODE;WIN32;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>UNICODE;WIN32;QT_DLL;_SCL_SECURE_NO_WARNINGS;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\Generated;.;$(QTDIR)\include;.\Generated\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;C:\Projects\Dev\Tools\boost_1_60_0;.\View\LogTab\Headers;.\Model\Filesystem\GitWrapper\Headers;.\Model\Filesystem\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -74,7 +74,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>UNICODE;WIN32;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>UNICODE;WIN32;QT_DLL;_SCL_SECURE_NO_WARNINGS;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\Generated;.;$(QTDIR)\include;.\Generated\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;C:\Projects\Dev\Tools\boost_1_60_0;.\View\LogTab\Headers;.\Model\Filesystem\GitWrapper\Headers;.\Model\Filesystem\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -116,11 +116,11 @@
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing IranEntryPoint.hpp...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Generated\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\Generated\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB  "-I.\Generated" "-I." "-I$(QTDIR)\include" "-I.\Generated\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-IC:\Projects\Dev\Tools\boost_1_60_0" "-I.\View\LogTab\Headers" "-I.\Model\Filesystem\GitWrapper\Headers" "-I.\Model\Filesystem\Headers" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\Generated\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -D_SCL_SECURE_NO_WARNINGS -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB  "-I.\Generated" "-I." "-I$(QTDIR)\include" "-I.\Generated\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-IC:\Projects\Dev\Tools\boost_1_60_0" "-I.\View\LogTab\Headers" "-I.\Model\Filesystem\GitWrapper\Headers" "-I.\Model\Filesystem\Headers" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing IranEntryPoint.hpp...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Generated\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\Generated\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB  "-I.\Generated" "-I." "-I$(QTDIR)\include" "-I.\Generated\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-IC:\Projects\Dev\Tools\boost_1_60_0" "-I.\View\LogTab\Headers" "-I.\Model\Filesystem\GitWrapper\Headers" "-I.\Model\Filesystem\Headers" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\Generated\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -D_SCL_SECURE_NO_WARNINGS -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB  "-I.\Generated" "-I." "-I$(QTDIR)\include" "-I.\Generated\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-IC:\Projects\Dev\Tools\boost_1_60_0" "-I.\View\LogTab\Headers" "-I.\Model\Filesystem\GitWrapper\Headers" "-I.\Model\Filesystem\Headers" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
