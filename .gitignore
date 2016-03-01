@@ -4,9 +4,8 @@ I-RAN.VC.opendb
 #Remove stuff that gets compiled!
 Win32/*
 Win32\*
-I-RAN - Controler/Win32/*
-I-RAN - Model/Win32/*
-I-RAN - View/Win32/*
+I-RAN/Win32/*
+
 
 #RW Install Contents
 RW-Install/Version.txt
