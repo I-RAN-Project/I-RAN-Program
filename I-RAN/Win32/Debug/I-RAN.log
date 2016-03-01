@@ -1,0 +1,37 @@
+﻿  Moc'ing IranEntryPoint.hpp...
+  GitWrapper.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory(349): warning C4996: 'std::_Uninitialized_copy0': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory(336): note: see declaration of 'std::_Uninitialized_copy0'
+  C:\Projects\Dev\Tools\boost_1_60_0\boost/numeric/ublas/storage.hpp(94): note: see reference to function template instantiation '_FwdIt std::uninitialized_copy<const std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>*,std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>*>(_InIt,_InIt,_FwdIt)' being compiled
+          with
+          [
+              _FwdIt=std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>> *,
+              _InIt=const std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>> *
+          ]
+  C:\Projects\Dev\Tools\boost_1_60_0\boost/numeric/ublas/storage.hpp(89): note: while compiling class template member function 'boost::numeric::ublas::unbounded_array<T,std::allocator<T>>::unbounded_array(const boost::numeric::ublas::unbounded_array<T,std::allocator<T>> &)'
+          with
+          [
+              T=std::wstring
+          ]
+  C:\Projects\Dev\Tools\boost_1_60_0\boost/numeric/ublas/vector.hpp(120): note: see reference to function template instantiation 'boost::numeric::ublas::unbounded_array<T,std::allocator<T>>::unbounded_array(const boost::numeric::ublas::unbounded_array<T,std::allocator<T>> &)' being compiled
+          with
+          [
+              T=std::wstring
+          ]
+  C:\Projects\Dev\Tools\boost_1_60_0\boost/numeric/ublas/vector.hpp(58): note: see reference to class template instantiation 'boost::numeric::ublas::unbounded_array<T,std::allocator<T>>' being compiled
+          with
+          [
+              T=std::wstring
+          ]
+  Controller\Filesystem\GitWrapper\Sources\GitWrapper.cpp(18): note: see reference to class template instantiation 'boost::numeric::ublas::vector<std::wstring,boost::numeric::ublas::unbounded_array<T,std::allocator<T>>>' being compiled
+          with
+          [
+              T=std::wstring
+          ]
+  moc_IranEntryPoint.cpp
+  IranEntryPoint.cpp
+  main.cpp
+View\EntryPoint\Sources\main.cpp(8): error C2248: 'QApplication::QApplication': cannot access private member declared in class 'QApplication'
+  c:\qt\qt5.6.0\5.6\msvc2015\include\qtwidgets\qapplication.h(206): note: see declaration of 'QApplication::QApplication'
+  c:\qt\qt5.6.0\5.6\msvc2015\include\qtwidgets\qapplication.h(65): note: see declaration of 'QApplication'
+  Generating Code...
