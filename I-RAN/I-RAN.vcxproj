@@ -197,6 +197,17 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\Generated\ui_%(Filename).h" "%(FullPath)"</Command>
     </CustomBuild>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.gitignore" />
+    <None Include="..\CHANGELOG.md" />
+    <None Include="..\CONTRIBUTING.md" />
+    <None Include="..\LICENSE.md" />
+    <None Include="..\README.md" />
+    <None Include="..\SetupInstall - GitPortable.bat" />
+    <None Include="..\SetupInstall - RuntimeLibs.bat" />
+    <None Include="..\SetupInstall - RW.bat" />
+    <None Include="..\SetupInstall.bat" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -3,7 +3,10 @@
 
 int main(int argc, char *argv[])
 {
-	QApplication application(argc, argv);
+	QApplication app(argc, argv);
 	IranEntryPoint eP;
-	return eP.RunApp(argc, argv, application);
+
+	//I need to pass a reference to app... for reasons!
+	int runApp = eP.RunApp(argc, argv, &app);
+	return runApp;
 }

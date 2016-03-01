@@ -12,7 +12,7 @@ public:
 	IranEntryPoint(QWidget *parent = 0);
 	~IranEntryPoint();
 
-	int RunApp(int argc, char *argv[], QApplication application);
+	int RunApp(int argc, char *argv[], QApplication *application);
 
 private:
 	Ui::IranEntryPointClass ui;
