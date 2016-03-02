@@ -14,34 +14,40 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Form
+class Ui_Logging
 {
 public:
+    QLabel *label;
 
-    void setupUi(QWidget *Form)
+    void setupUi(QWidget *Logging)
     {
-        if (Form->objectName().isEmpty())
-            Form->setObjectName(QStringLiteral("Form"));
-        Form->resize(400, 300);
+        if (Logging->objectName().isEmpty())
+            Logging->setObjectName(QStringLiteral("Logging"));
+        Logging->resize(400, 300);
+        label = new QLabel(Logging);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(10, 60, 321, 31));
 
-        retranslateUi(Form);
+        retranslateUi(Logging);
 
-        QMetaObject::connectSlotsByName(Form);
+        QMetaObject::connectSlotsByName(Logging);
     } // setupUi
 
-    void retranslateUi(QWidget *Form)
+    void retranslateUi(QWidget *Logging)
     {
-        Form->setWindowTitle(QApplication::translate("Form", "Form", 0));
+        Logging->setWindowTitle(QApplication::translate("Logging", "Form", 0));
+        label->setText(QApplication::translate("Logging", "OH ERROR MESAGES, OH ERROR MESSAGES. I LOVE YOU ALOT", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Form: public Ui_Form {};
+    class Logging: public Ui_Logging {};
 } // namespace Ui
 
 QT_END_NAMESPACE

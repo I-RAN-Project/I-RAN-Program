@@ -14,34 +14,40 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Form
+class Ui_DependenciesTree
 {
 public:
+    QLabel *label;
 
-    void setupUi(QWidget *Form)
+    void setupUi(QWidget *DependenciesTree)
     {
-        if (Form->objectName().isEmpty())
-            Form->setObjectName(QStringLiteral("Form"));
-        Form->resize(400, 300);
+        if (DependenciesTree->objectName().isEmpty())
+            DependenciesTree->setObjectName(QStringLiteral("DependenciesTree"));
+        DependenciesTree->resize(400, 300);
+        label = new QLabel(DependenciesTree);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(50, 90, 341, 151));
 
-        retranslateUi(Form);
+        retranslateUi(DependenciesTree);
 
-        QMetaObject::connectSlotsByName(Form);
+        QMetaObject::connectSlotsByName(DependenciesTree);
     } // setupUi
 
-    void retranslateUi(QWidget *Form)
+    void retranslateUi(QWidget *DependenciesTree)
     {
-        Form->setWindowTitle(QApplication::translate("Form", "Form", 0));
+        DependenciesTree->setWindowTitle(QApplication::translate("DependenciesTree", "Form", 0));
+        label->setText(QApplication::translate("DependenciesTree", "So much work... :( I JUST WANT TO MAKE GODDAM CONSOLE APP", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Form: public Ui_Form {};
+    class DependenciesTree: public Ui_DependenciesTree {};
 } // namespace Ui
 
 QT_END_NAMESPACE

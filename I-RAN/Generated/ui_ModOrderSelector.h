@@ -14,34 +14,40 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Form
+class Ui_ModOrderSelector
 {
 public:
+    QLabel *label;
 
-    void setupUi(QWidget *Form)
+    void setupUi(QWidget *ModOrderSelector)
     {
-        if (Form->objectName().isEmpty())
-            Form->setObjectName(QStringLiteral("Form"));
-        Form->resize(400, 300);
+        if (ModOrderSelector->objectName().isEmpty())
+            ModOrderSelector->setObjectName(QStringLiteral("ModOrderSelector"));
+        ModOrderSelector->resize(400, 300);
+        label = new QLabel(ModOrderSelector);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(130, 150, 151, 31));
 
-        retranslateUi(Form);
+        retranslateUi(ModOrderSelector);
 
-        QMetaObject::connectSlotsByName(Form);
+        QMetaObject::connectSlotsByName(ModOrderSelector);
     } // setupUi
 
-    void retranslateUi(QWidget *Form)
+    void retranslateUi(QWidget *ModOrderSelector)
     {
-        Form->setWindowTitle(QApplication::translate("Form", "Form", 0));
+        ModOrderSelector->setWindowTitle(QApplication::translate("ModOrderSelector", "Form", 0));
+        label->setText(QApplication::translate("ModOrderSelector", "MOD ORDER SELECOTR - WIP", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Form: public Ui_Form {};
+    class ModOrderSelector: public Ui_ModOrderSelector {};
 } // namespace Ui
 
 QT_END_NAMESPACE

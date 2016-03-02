@@ -3,19 +3,29 @@
 
 #include <QtWidgets/QMainWindow>
 #include "../../../Generated/ui_IranEntryPoint.h"
+#include "../../../Generated/ui_DependenciesTree.h"
+#include "../../../Generated/ui_Logging.h"
+#include "../../../Generated/ui_ModDownloadSelector.h"
+#include "../../../Generated/ui_ModOrderSelector.h"
+
 
 class IranEntryPoint : public QMainWindow
 {
 	Q_OBJECT
 
 public:
-	IranEntryPoint(QWidget *parent = 0);
+	IranEntryPoint(QWidget *parent = nullptr);
 	~IranEntryPoint();
 
-	int RunApp(QApplication *application);
+	int RunApp(QApplication &application);
 
 private:
 	Ui::IranEntryPointClass ui;
+
+	Ui::Logging logging;
+	Ui::ModDownloadSelector modDownloadSelector;
+	Ui::ModOrderSelector modOrderSelector;
+	Ui::DependenciesTree dependenciesTree;
 };
 
 #endif // IramEntryPoint_Hpp

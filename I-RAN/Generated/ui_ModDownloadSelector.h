@@ -14,34 +14,40 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Form
+class Ui_ModDownloadSelector
 {
 public:
+    QLabel *label;
 
-    void setupUi(QWidget *Form)
+    void setupUi(QWidget *ModDownloadSelector)
     {
-        if (Form->objectName().isEmpty())
-            Form->setObjectName(QStringLiteral("Form"));
-        Form->resize(400, 300);
+        if (ModDownloadSelector->objectName().isEmpty())
+            ModDownloadSelector->setObjectName(QStringLiteral("ModDownloadSelector"));
+        ModDownloadSelector->resize(400, 300);
+        label = new QLabel(ModDownloadSelector);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(120, 100, 181, 41));
 
-        retranslateUi(Form);
+        retranslateUi(ModDownloadSelector);
 
-        QMetaObject::connectSlotsByName(Form);
+        QMetaObject::connectSlotsByName(ModDownloadSelector);
     } // setupUi
 
-    void retranslateUi(QWidget *Form)
+    void retranslateUi(QWidget *ModDownloadSelector)
     {
-        Form->setWindowTitle(QApplication::translate("Form", "Form", 0));
+        ModDownloadSelector->setWindowTitle(QApplication::translate("ModDownloadSelector", "Form", 0));
+        label->setText(QApplication::translate("ModDownloadSelector", "MOD DOWNLOAD SELECTOR - WIP", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Form: public Ui_Form {};
+    class ModDownloadSelector: public Ui_ModDownloadSelector {};
 } // namespace Ui
 
 QT_END_NAMESPACE

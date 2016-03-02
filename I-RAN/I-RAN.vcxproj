@@ -136,7 +136,6 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Generated\ui_DependenciesTree.h" />
     <ClInclude Include="Generated\ui_IranEntryPoint.h" />
     <ClInclude Include="Controller\Filesystem\GitWrapper\Headers\GitWrapper.hpp" />
     <ClInclude Include="Controller\Filesystem\Headers\RunExecutables.hpp" />

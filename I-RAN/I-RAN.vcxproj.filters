@@ -96,9 +96,6 @@
     <ClInclude Include="Controller\Filesystem\Headers\RunExecutables.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Generated\ui_DependenciesTree.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
     <ClInclude Include="Generated\ui_Logging.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
