@@ -38,3 +38,6 @@ MainFolder
    
 Use 'SetupInstall.bat' to move the RW-Install and Git\PortableGit_WIN32 for you.
 Remember to drag your own copy of RW into 'RW-Install'. Insure the Mods folder exists but is empty!
+
+Great git command:
+git log --graph --full-history --all --color --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
