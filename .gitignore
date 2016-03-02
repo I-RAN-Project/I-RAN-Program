@@ -6,8 +6,11 @@ Win32/*
 Win32\*
 I-RAN/Win32/*
 
-#.sdf
+#.sdf 'N' stuff
 *.sdf
+ipch\*
+ipch/*
+
 
 #RW Install Contents
 RW-Install/Version.txt
