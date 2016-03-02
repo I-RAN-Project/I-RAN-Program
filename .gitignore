@@ -6,6 +6,8 @@ Win32/*
 Win32\*
 I-RAN/Win32/*
 
+#.sdf
+*.sdf
 
 #RW Install Contents
 RW-Install/Version.txt
