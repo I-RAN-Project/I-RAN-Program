@@ -10,6 +10,8 @@ I-RAN/Win32/*
 *.sdf
 ipch\*
 ipch/*
+.vs\*
+.vs/*
 
 
 #RW Install Contents
