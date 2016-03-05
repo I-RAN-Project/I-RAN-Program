@@ -102,8 +102,11 @@
     <ClInclude Include="Generated\ui_ModDownloadSelector.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
+    <ClInclude Include="Generated\ui_DependenciesTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Generated\ui_ModOrderSelector.h">
-      <Filter>Generated Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
