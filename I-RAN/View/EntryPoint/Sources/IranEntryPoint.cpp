@@ -12,21 +12,33 @@ IranEntryPoint::~IranEntryPoint()
 
 int IranEntryPoint::RunApp(QApplication &application)
 {
+	state->setMinimumSize(state->sizeHint());
+	state->setText(tr("state"));
+	state->setToolTip(tr("state"));
+
+	progressBar->setAlignment(Qt::AlignCenter);
+	progressBar->setFormat(tr("progressBar"));
+	progressBar->setRange(0, 100);
+	progressBar->setValue(0);
+
+	ui.statusBar->addPermanentWidget(state);
+	ui.statusBar->addPermanentWidget(progressBar, 1);
+
 	QWidget modDownloadSelectorWidget;
 	modDownloadSelector.setupUi(&modDownloadSelectorWidget);
-	ui.tabWidget->addTab(&modDownloadSelectorWidget, QStringLiteral("Mod Downlaod Selector"));
+	ui.tabWidget->addTab(&modDownloadSelectorWidget, tr("Mod Download Selector"));
 
 	QWidget modOrderSelectorWidget;
 	modOrderSelector.setupUi(&modOrderSelectorWidget);
-	ui.tabWidget->addTab(&modOrderSelectorWidget, QStringLiteral("Mod Order Selector"));
+	ui.tabWidget->addTab(&modOrderSelectorWidget, tr("Mod Order Selector"));
 
 	QWidget dependenciesTreeWidget;
 	dependenciesTree.setupUi(&dependenciesTreeWidget);
-	ui.tabWidget->addTab(&dependenciesTreeWidget, QStringLiteral("Dependencies Tree Widget"));
+	ui.tabWidget->addTab(&dependenciesTreeWidget, tr("Dependencies Tree Widget"));
 
 	QWidget loggingWidget;
 	logging.setupUi(&loggingWidget);
-	ui.tabWidget->addTab(&loggingWidget, QStringLiteral("Logging"));
+	ui.tabWidget->addTab(&loggingWidget, tr("Logging"));
 
 	show();
 	return application.exec();
