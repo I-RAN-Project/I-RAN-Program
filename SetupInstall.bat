@@ -16,6 +16,5 @@ mkdir "Release"
 
 cd ..\
 
-call ".\SetupInstall - GitPortable.bat"
 call ".\SetupInstall - RuntimeLibs.bat"
 call ".\SetupInstall - RW.bat"

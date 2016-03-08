@@ -20,18 +20,16 @@ public:
 	IranEntryPoint(QWidget *parent = nullptr);
 	~IranEntryPoint();
 
-	QLabel *state = new QLabel(this);
-	QProgressBar *progressBar = new QProgressBar(this);
-
 	int RunApp(QApplication &application);
+private:
+	QLabel *state;
+	QProgressBar *progressBar;
 
 	Ui::IranEntryPointClass ui;
 	Ui::Logging logging;
 	Ui::ModDownloadSelector modDownloadSelector;
 	Ui::ModOrderSelector modOrderSelector;
 	Ui::DependenciesTree dependenciesTree;
-private:
-
 };
 
 #endif // IramEntryPoint_Hpp

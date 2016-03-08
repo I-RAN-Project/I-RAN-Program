@@ -3,11 +3,14 @@
 IranEntryPoint::IranEntryPoint(QWidget *parent) : QMainWindow(parent)
 {
 	ui.setupUi(this);
+	state = new QLabel(this);
+	progressBar = new QProgressBar(this);
 }
 
 IranEntryPoint::~IranEntryPoint()
 {
-
+	delete state;
+	delete progressBar;
 }
 
 int IranEntryPoint::RunApp(QApplication &application)
