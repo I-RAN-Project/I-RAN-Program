@@ -21,23 +21,6 @@ Welcome to Gent's Integrated Rimworld Archive Network. Currently we are implemen
  * a combination of the two words "I" (the prounoun used to refer to yourself) and "RAN" (the past tense of "Run")
  * "Integrated Rimworld Archive Network" - you're in a good mood, and it actually works for you. Angels sing, and a light suddenly fills the room.
  * "I RAN FOR A WHILE BUT THEN DECIDED TO BE AN ASSHOLE" - when it breaks
- 
----------------------
- 
-## Required Setup
-
----------------------
-MainFolder
- * I-RAN - Controler.exe
- * I-RAN - Model.dll
- * I-RAN - View.dll
- * RW-Install
-   * RW install from under 'RW-Install\'
- * GitPortable
-   * Git install from under 'Git\PortableGit_WIN32'
-   
-Use 'SetupInstall.bat' to move the RW-Install and Git\PortableGit_WIN32 for you.
-Remember to drag your own copy of RW into 'RW-Install'. Insure the Mods folder exists but is empty!
 
 ---------------------
  
@@ -55,9 +38,139 @@ Instead do the following:
 
 ---------------------
  
+## QT
+
+---------------------
+
+Will be added when QT officially gains VS2015 support. (Mid-late 2016)
+
+---------------------
+ 
+## libcurl
+
+---------------------
+
+Libcurl is a _tad_ hard to compile for the newcomers. 
+
+GL.
+
+### NASM install.
+1- Goto http://www.nasm.us/ then click on downloads.
+2- Click on version 2.12
+3- Download one of the archives (like nasm-2.12.tar.bz2)
+4- Extract to a directory (I extracted to C:\Projects\Dev\Tools)
+
+Now it should be something like this:
+random-directoy
+|-nasm-2.12
+  |-Nasm stuff
+  
+5- Make the new environment variable NASMLOC and add where it is (C:\Projects\Dev\Tools\nasm-2.12 for me)
+6- Add %NASMLOC%\ to your path environmental variable
+7- Go to the NASM directory and run 'nmake /f Mkfiles/msvc.mak'
+
+### Active Perl Install
+1- Goto http://www.activestate.com/activeperl/downloads
+2- Download Perl
+3- Install Perl to C:\Program Files\Perl
+
+### OpenSSL Install
+1- Goto https://www.openssl.org/ then click on downloads
+2- Download fips version 2.0.12 (openssl-fips-2.0.12.tar.gz)
+3- Download OpenSSL version 1.0.2 (openssl-1.0.2g.tar.gz)
+3- Extract it to a directory (I extracted to C:\Projects\Dev\Tools\OpenSSL)
+4- Create the directory 'openssl_lib'
+
+Now it should be something like this:
+random-directoy
+|-openssl-1.0.2g
+  |-OpenSSL stuff
+|-openssl_lib
+
+5- Open the VS2015 cmd line
+6- Change to the directory where you extracted OpenSSL
+7- Run 'perl Configure VC-WIN32 --prefix=C:/Projects/Dev/Tools/Openssl/openssl_lib' (HAVING UNNIX STYLE SLASHES IS IMPORTANT)
+8- Run 'ms\do_nasm'
+
+9- Run 'nmake -f ms\nt.mak'
+10- Wait
+11- Wait
+12- Wait
+
+13- Run 'nmake -f ms\nt.mak test'
+14- Run 'nmake -f ms\nt.mak install'
+
+### zlib Install
+1- Goto zlib.net
+2- Download version 1.2.8
+
+3- Extract it to a directory (I extracted to C:\Projects\Dev\Tools)
+
+Now it should be something like this:
+random-directoy
+|-zlib-1.2.8
+  |-zlib stuff
+
+4- Open contrib\vstudio\vc11 in VS2015. Click 'OK' for the one-way upgrade
+5- Goto the Solution explorer, right click on the the zlibvc project and select properties.
+6- Set Configurations to All Configurations
+7- Set platform to Win32
+8- Goto Configuration Properties>Linker>Advanced and set Image Has Safe Exception Handlers to Not
+	Do the same for all the other projects.
+9- Go to Configuration Properties>C/C++>Preprocessor and in the Preprocessor Definitions line remove “ZLIB_WINAPI;”n)
+	Do the same for all the other projects BUT zlibvc.
+10- Insure your set to compile a Debug Win32 Build then build
+11- After receiving the error related to VERSION, double click on it to open the .def file
+12- Remove the last dot from it (so it goes from 'VERSION 1.2.8' to 'VERSION 1.28')
+13- Click on the Green triangle thingy.
+14- Change mod to release, hit rebuild.
+
+15- Make a folder called zlibVS2015DLLs
+16- Add 2 folders called "Debug" and "Release"
+17- Delete the files under contrib\vstudio\vc11\x86
+18- rebuild (NOT BUILD) the project with debug mode
+19- Copy and paste them into the debug folder
+20- Delete the files under contrib\vstudio\vc11\x86
+21- rebuild (NOT BUILD) the project with release mode
+22- Copy and paste them into the release folder
+
+### libSSH2 Install
+1- Goto https://www.libssh2.org/
+2- Download version 1.7.0
+3- Extract it to a directory (I extracted to C:\Projects\Dev\Tools)
+
+Now it should be something like this:
+random-directoy
+|-libssh2-1.7.0
+  |-libSSH2 stuff
+
+4- Open win32\libssh2.dsp in VS2015. Click 'OK' for the one-way upgrade
+5- Goto Build>Configuration Manger and select OpenSSL DLL Debug as the active solution configuration. Keep it set to x86.
+
+6- Goto the Solution explorer, right click on the the project and select properties.
+7- On Configuration select active.
+8- Goto Configuration Properties>C/C++>General and add openssl_lib/include to the Additional Include Properties
+9- Goto Configuration Properties>C/C++>Code Generation and set the following:
+	Set Runtime Library to Multi-Threaded Debug Dll
+	Set Enable Function-Level Linking to Yes
+	
+10- Goto Configuration Properties>Linker>General and add openssl_lib/lib to Additional Library Directories 
+	Also add the zlibVS2015DLLs/Debug/ZlibStatDebug directory
+
+11- Goto onfiguration Properties>Linker>Input and replace zlib.lib with zlibstat.lib
+	Also add crypt32.lib
+	
+11- Hit build.
+12- Go through the snprintf errors and remove the snprintf and vsnprintf define lines.
+13- Hit build.
+---------------------
+ 
 ## Other stuff
 
 ---------------------
+nmake /f Makefile.vc mode=dll WITH_SSL=dll  WITH_ZLIB=dll WITH_SSH2=dll ENABLE_WINSSL=yes GEN_PDB=yes DEBUG=yes MACHINE=x86
+
+nmake /f Makefile.vc mode=dll WITH_SSL=dll  WITH_ZLIB=dll WITH_SSH2=dll ENABLE_WINSSL=yes GEN_PDB=no DEBUG=no MACHINE=x86
 
 Great git command for trees:
 git log --graph --full-history --all --color --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
