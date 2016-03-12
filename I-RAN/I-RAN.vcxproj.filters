@@ -53,10 +53,7 @@
     <ClCompile Include="View\LogTab\Sources\Logging.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Controller\Filesystem\GitWrapper\Sources\GitWrapper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Controller\Filesystem\Sources\RunExecutables.cpp">
+    <ClCompile Include="Model\Filesystem\Sources\RunExecutables.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -90,12 +87,6 @@
     <ClInclude Include="View\LogTab\Headers\Logging.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Controller\Filesystem\GitWrapper\Headers\GitWrapper.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Controller\Filesystem\Headers\RunExecutables.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Generated\ui_Logging.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
@@ -108,15 +99,15 @@
     <ClInclude Include="Generated\ui_ModOrderSelector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Model\Filesystem\Headers\RunExecutables.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.gitignore" />
     <None Include="..\CONTRIBUTING.md" />
     <None Include="..\LICENSE.md" />
     <None Include="..\README.md" />
-    <None Include="..\SetupInstall - GitPortable.bat" />
-    <None Include="..\SetupInstall - RuntimeLibs.bat" />
     <None Include="..\SetupInstall - RW.bat" />
     <None Include="..\SetupInstall.bat" />
+    <None Include="..\SetupInstall - RuntimeLibs.bat" />
   </ItemGroup>
 </Project>

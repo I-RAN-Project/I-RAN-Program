@@ -46,6 +46,14 @@ Will be added when QT officially gains VS2015 support. (Mid-late 2016)
 
 ---------------------
  
+## Boost
+
+---------------------
+
+Will be added next time I compile it.
+
+---------------------
+ 
 ## libcurl
 
 ---------------------
@@ -63,7 +71,7 @@ GL.
 Now it should be something like this:
 random-directoy
 |-nasm-2.12
-  |-Nasm stuff
+| |-Nasm stuff
   
 5- Make the new environment variable NASMLOC and add where it is (C:\Projects\Dev\Tools\nasm-2.12 for me)
 6- Add %NASMLOC%\ to your path environmental variable
@@ -84,7 +92,7 @@ random-directoy
 Now it should be something like this:
 random-directoy
 |-openssl-1.0.2g
-  |-OpenSSL stuff
+| |-OpenSSL stuff
 |-openssl_lib
 
 5- Open the VS2015 cmd line
@@ -109,7 +117,7 @@ random-directoy
 Now it should be something like this:
 random-directoy
 |-zlib-1.2.8
-  |-zlib stuff
+| |-zlib stuff
 
 4- Open contrib\vstudio\vc11 in VS2015. Click 'OK' for the one-way upgrade
 5- Goto the Solution explorer, right click on the the zlibvc project and select properties.
@@ -142,7 +150,7 @@ random-directoy
 Now it should be something like this:
 random-directoy
 |-libssh2-1.7.0
-  |-libSSH2 stuff
+| |-libSSH2 stuff
 
 4- Open win32\libssh2.dsp in VS2015. Click 'OK' for the one-way upgrade
 5- Goto Build>Configuration Manger and select OpenSSL DLL Debug as the active solution configuration. Keep it set to x86.
@@ -163,14 +171,24 @@ random-directoy
 11- Hit build.
 12- Go through the snprintf errors and remove the snprintf and vsnprintf define lines.
 13- Hit build.
+
+14- Repeat a similar processes for the debug and release versions for the lib and dll versions.
+	I assume you can figure this out yourself.
+15- Make the new directory 'libsshOut'
+16- Copy the [debug/release]_[dll/lib] folders to the new directory.
+
+### LibcURL Install
+Finally! If you've made it this far, congrats.
+FINNALY I DID IT.
+Can't be bothered to document what I build. To bad for you. 
+
+One hint: I used this command:
+nmake /f Makefile.vc mode=dll VC=14 WITH_SSL=dll WITH_ZLIB=dll WITH_SSH2=dll GEN_PDB=yes DEBUG=yes MACHINE=x86
+
 ---------------------
  
 ## Other stuff
 
----------------------
-nmake /f Makefile.vc mode=dll WITH_SSL=dll  WITH_ZLIB=dll WITH_SSH2=dll ENABLE_WINSSL=yes GEN_PDB=yes DEBUG=yes MACHINE=x86
-
-nmake /f Makefile.vc mode=dll WITH_SSL=dll  WITH_ZLIB=dll WITH_SSH2=dll ENABLE_WINSSL=yes GEN_PDB=no DEBUG=no MACHINE=x86
-
+---------------------  
 Great git command for trees:
 git log --graph --full-history --all --color --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'

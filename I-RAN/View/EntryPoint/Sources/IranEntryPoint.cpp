@@ -43,9 +43,6 @@ int IranEntryPoint::RunApp(QApplication &application)
 	logging.setupUi(&loggingWidget);
 	ui.tabWidget->addTab(&loggingWidget, tr("Logging"));
 
-	show();
+	show();													 
 	return application.exec();
-	
-	//To stop the C4100 warning.
-	application;
 }

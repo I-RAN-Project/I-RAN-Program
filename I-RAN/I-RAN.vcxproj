@@ -54,42 +54,46 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>UNICODE;WIN32;QT_DLL;_SCL_SECURE_NO_WARNINGS;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\Generated;.;$(QTDIR)\include;.\Generated\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;C:\Projects\Dev\Tools\boost_1_60_0;.\View\LogTab\Headers;.\Model\Filesystem\GitWrapper\Headers;.\Model\Filesystem\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\Generated;.;$(QTDIR)\include;.\Generated\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;..\deps\boost_1_60_0;.\View\LogTab\Headers;..\deps\libssh2-1.7.0\include;..\deps\CURL\curl-7.47.1\builds\libcurl-vc14-x86-debug-dll-ssl-dll-zlib-dll-ssh2-dll-ipv6-sspi\include;..\deps\OpenSSL\openssl_lib\include;..\deps\zlib-1.2.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <TreatWarningAsError>true</TreatWarningAsError>
       <SDLCheck>false</SDLCheck>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\Projects\Dev\Tools\boost_1_60_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;..\deps\boost_1_60_0\stage\lib;..\deps\CURL\curl-7.47.1\builds\libcurl-vc14-x86-debug-dll-ssl-dll-zlib-dll-ssh2-dll-ipv6-sspi\lib;..\deps\libsshOut\Debug_dll;..\deps\OpenSSL\openssl_lib\lib;..\deps\zlibVS2015DLLs\Debug\ZlibDllDebug</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>UNICODE;WIN32;QT_DLL;_SCL_SECURE_NO_WARNINGS;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\Generated;.;$(QTDIR)\include;.\Generated\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;C:\Projects\Dev\Tools\boost_1_60_0;.\View\LogTab\Headers;.\Model\Filesystem\GitWrapper\Headers;.\Model\Filesystem\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\Generated;.;$(QTDIR)\include;.\Generated\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;..\deps\boost_1_60_0;.\View\LogTab\Headers;..\deps\libssh2-1.7.0\include;..\deps\CURL\curl-7.47.1\builds\libcurl-vc14-x86-debug-dll-ssl-dll-zlib-dll-ssh2-dll-ipv6-sspi\include;..\deps\OpenSSL\openssl_lib\include;..\deps\zlib-1.2.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <TreatWarningAsError>true</TreatWarningAsError>
       <SDLCheck>false</SDLCheck>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\Projects\Dev\Tools\boost_1_60_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;..\deps\boost_1_60_0\stage\lib;..\deps\CURL\curl-7.47.1\builds\libcurl-vc14-x86-debug-dll-ssl-dll-zlib-dll-ssh2-dll-ipv6-sspi\lib;..\deps\libsshOut\Debug_dll;..\deps\OpenSSL\openssl_lib\lib;..\deps\zlibVS2015DLLs\Debug\ZlibDllDebug</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -105,8 +109,7 @@
     <ClCompile Include="Generated\Release\moc_IranEntryPoint.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Controller\Filesystem\GitWrapper\Sources\GitWrapper.cpp" />
-    <ClCompile Include="Controller\Filesystem\Sources\RunExecutables.cpp" />
+    <ClCompile Include="Model\Filesystem\Sources\RunExecutables.cpp" />
     <ClCompile Include="View\EntryPoint\Sources\IranEntryPoint.cpp" />
     <ClCompile Include="View\EntryPoint\Sources\main.cpp" />
     <ClCompile Include="View\LogTab\Sources\Logging.cpp" />
@@ -116,11 +119,11 @@
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing IranEntryPoint.hpp...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Generated\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\Generated\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -D_SCL_SECURE_NO_WARNINGS -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB  "-I.\Generated" "-I." "-I$(QTDIR)\include" "-I.\Generated\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-IC:\Projects\Dev\Tools\boost_1_60_0" "-I.\View\LogTab\Headers" "-I.\Model\Filesystem\GitWrapper\Headers" "-I.\Model\Filesystem\Headers" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\Generated\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -D_SCL_SECURE_NO_WARNINGS -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB  "-I.\Generated" "-I." "-I$(QTDIR)\include" "-I.\Generated\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\..\deps\boost_1_60_0" "-I.\View\LogTab\Headers" "-I.\..\deps\libssh2-1.7.0\include" "-I.\..\deps\CURL\curl-7.47.1\builds\libcurl-vc14-x86-debug-dll-ssl-dll-zlib-dll-ssh2-dll-ipv6-sspi\include" "-I.\..\deps\OpenSSL\openssl_lib\include" "-I.\..\deps\zlib-1.2.8" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing IranEntryPoint.hpp...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Generated\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\Generated\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -D_SCL_SECURE_NO_WARNINGS -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB  "-I.\Generated" "-I." "-I$(QTDIR)\include" "-I.\Generated\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-IC:\Projects\Dev\Tools\boost_1_60_0" "-I.\View\LogTab\Headers" "-I.\Model\Filesystem\GitWrapper\Headers" "-I.\Model\Filesystem\Headers" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\Generated\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -D_SCL_SECURE_NO_WARNINGS -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB  "-I.\Generated" "-I." "-I$(QTDIR)\include" "-I.\Generated\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\..\deps\boost_1_60_0" "-I.\View\LogTab\Headers" "-I.\..\deps\libssh2-1.7.0\include" "-I.\..\deps\CURL\curl-7.47.1\builds\libcurl-vc14-x86-debug-dll-ssl-dll-zlib-dll-ssh2-dll-ipv6-sspi\include" "-I.\..\deps\OpenSSL\openssl_lib\include" "-I.\..\deps\zlib-1.2.8" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -138,11 +141,10 @@
   <ItemGroup>
     <ClInclude Include="Generated\ui_DependenciesTree.h" />
     <ClInclude Include="Generated\ui_IranEntryPoint.h" />
-    <ClInclude Include="Controller\Filesystem\GitWrapper\Headers\GitWrapper.hpp" />
-    <ClInclude Include="Controller\Filesystem\Headers\RunExecutables.hpp" />
     <ClInclude Include="Generated\ui_Logging.h" />
     <ClInclude Include="Generated\ui_ModDownloadSelector.h" />
     <ClInclude Include="Generated\ui_ModOrderSelector.h" />
+    <ClInclude Include="Model\Filesystem\Headers\RunExecutables.hpp" />
     <ClInclude Include="View\LogTab\Headers\Logging.hpp" />
   </ItemGroup>
   <ItemGroup>
@@ -210,7 +212,6 @@
     <None Include="..\CONTRIBUTING.md" />
     <None Include="..\LICENSE.md" />
     <None Include="..\README.md" />
-    <None Include="..\SetupInstall - GitPortable.bat" />
     <None Include="..\SetupInstall - RuntimeLibs.bat" />
     <None Include="..\SetupInstall - RW.bat" />
     <None Include="..\SetupInstall.bat" />
