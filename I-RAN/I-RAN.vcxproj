@@ -69,7 +69,7 @@
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;..\deps\boost_1_60_0\stage\lib;..\deps\CURL\curl-7.47.1\builds\libcurl-vc14-x86-debug-dll-ssl-dll-zlib-dll-ssh2-dll-ipv6-sspi\lib;..\deps\libsshOut\Debug_dll;..\deps\OpenSSL\openssl_lib\lib;..\deps\zlibVS2015DLLs\Debug\ZlibDllDebug</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;libcurl_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;libcurl_debug.lib;zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
       <SuppressStartupBanner>false</SuppressStartupBanner>
     </Link>
@@ -89,9 +89,9 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;..\deps\boost_1_60_0\stage\lib;..\deps\CURL\curl-7.47.1\builds\libcurl-vc14-x86-debug-dll-ssl-dll-zlib-dll-ssh2-dll-ipv6-sspi\lib;..\deps\libsshOut\Debug_dll;..\deps\OpenSSL\openssl_lib\lib;..\deps\zlibVS2015DLLs\Debug\ZlibDllDebug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;..\deps\boost_1_60_0\stage\lib;..\deps\CURL\curl-7.47.1\builds\libcurl-vc14-x86-debug-dll-ssl-dll-zlib-dll-ssh2-dll-ipv6-sspi\lib;..\deps\libsshOut\Debug_dll;..\deps\OpenSSL\openssl_lib\lib;..\deps\zlibVS2015DLLs\Release\ZlibDllRelease</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;libcurl_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;libcurl_debug.lib;zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
       <SuppressStartupBanner>false</SuppressStartupBanner>
     </Link>

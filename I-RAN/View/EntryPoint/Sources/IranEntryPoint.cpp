@@ -19,6 +19,21 @@ IranEntryPoint::IranEntryPoint(QWidget *parent) : QMainWindow(parent)
 	ui.statusBar->addPermanentWidget(state);
 	ui.statusBar->addPermanentWidget(progressBar, 1);
 
+	curl_global_init(CURL_GLOBAL_ALL);
+	myCURLHandle = curl_easy_init(); 
+}
+
+IranEntryPoint::~IranEntryPoint()
+{
+	curl_easy_cleanup(myCURLHandle);
+	curl_global_cleanup();
+
+	delete state;
+	delete progressBar;
+}
+
+int IranEntryPoint::RunApp(QApplication &application)
+{
 	QWidget modDownloadSelectorWidget;
 	modDownloadSelector.setupUi(&modDownloadSelectorWidget);
 	ui.tabWidget->addTab(&modDownloadSelectorWidget, tr("Mod Download Selector"));
@@ -35,21 +50,6 @@ IranEntryPoint::IranEntryPoint(QWidget *parent) : QMainWindow(parent)
 	logging.setupUi(&loggingWidget);
 	ui.tabWidget->addTab(&loggingWidget, tr("Logging"));
 
-	curl_global_init(CURL_GLOBAL_ALL);
-	myCURLHandle = curl_easy_init(); 
-}
-
-IranEntryPoint::~IranEntryPoint()
-{
-	curl_easy_cleanup(myCURLHandle);
-	curl_global_cleanup();
-
-	delete state;
-	delete progressBar;
-}
-
-int IranEntryPoint::RunApp(QApplication &application)
-{
 	show();													 
 	return application.exec();
 }
