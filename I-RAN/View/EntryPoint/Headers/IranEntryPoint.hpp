@@ -12,6 +12,8 @@
 #include <QLabel>
 #include <QProgressBar>
 
+#include <curl/curl.h>
+
 class IranEntryPoint : public QMainWindow
 {
 	Q_OBJECT
@@ -24,6 +26,8 @@ public:
 private:
 	QLabel *state;
 	QProgressBar *progressBar;
+
+	CURL * myCURLHandle;
 
 	Ui::IranEntryPointClass ui;
 	Ui::Logging logging;

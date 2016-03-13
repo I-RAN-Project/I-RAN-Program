@@ -2,19 +2,11 @@
 
 IranEntryPoint::IranEntryPoint(QWidget *parent) : QMainWindow(parent)
 {
+
 	ui.setupUi(this);
 	state = new QLabel(this);
 	progressBar = new QProgressBar(this);
-}
 
-IranEntryPoint::~IranEntryPoint()
-{
-	delete state;
-	delete progressBar;
-}
-
-int IranEntryPoint::RunApp(QApplication &application)
-{
 	state->setMinimumSize(state->sizeHint());
 	state->setText(tr("state"));
 	state->setToolTip(tr("state"));
@@ -43,6 +35,21 @@ int IranEntryPoint::RunApp(QApplication &application)
 	logging.setupUi(&loggingWidget);
 	ui.tabWidget->addTab(&loggingWidget, tr("Logging"));
 
+	curl_global_init(CURL_GLOBAL_ALL);
+	myCURLHandle = curl_easy_init(); 
+}
+
+IranEntryPoint::~IranEntryPoint()
+{
+	curl_easy_cleanup(myCURLHandle);
+	curl_global_cleanup();
+
+	delete state;
+	delete progressBar;
+}
+
+int IranEntryPoint::RunApp(QApplication &application)
+{
 	show();													 
 	return application.exec();
 }
